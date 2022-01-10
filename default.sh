@@ -3,6 +3,8 @@
 set -eu
 set -x
 
+cd $(dirname $0)
+
 find -name merged_profile -name 'coverage.*' -o -name '*.gcov' -o -name '*.gcda' -o -name '*.gcno' | xargs rm -rf
 
 gcc --coverage src/repro.c

@@ -1,7 +1,9 @@
 #!/bin/sh
 
-#set -eu
+set -eu
 set -x
+
+cd $(dirname $0)
 
 find -name merged_profile -o -name 'coverage.*' -o -name '*.gcov' -o -name '*.gcda' -o -name '*.gcno' | xargs rm -rf
 
