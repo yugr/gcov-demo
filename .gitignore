@@ -1,0 +1,5 @@
+a.out
+*.gcno
+*.gcda
+coverage.*
+.*swp
