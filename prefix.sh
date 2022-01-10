@@ -12,7 +12,7 @@ gcc --coverage src/repro.c
 GCOV_PREFIX=coverage.1 ./a.out 1
 GCOV_PREFIX=coverage.2 ./a.out 2
 
-sh -x `which gcov-tool-many` merge coverage.*
+gcov-tool-many merge coverage.*
 
 cp `find coverage.1/ -name \*.gcda` .
 #gcov --stdout repro.c
